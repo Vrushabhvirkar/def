@@ -279,7 +279,7 @@ router.post("/aAbBcC/updatedocs",async(req,res)=>{
         to:`${email}`,
         from: "BankAgentBridge Greivanceportal <mailgun@sandbox475be5d02c23425d95acf47c4bc55454.mailgun.org>",
         subject:'An update found',
-        text:`Hello ${name} ,Department had an update on your grievance number ${gId} and 
+        text:`Hello, Department had an update on your grievance number ${gId} and 
         the status has been updated to ${status}. Find the feedback associated to your grievance:
         ${feedback}`
       };
