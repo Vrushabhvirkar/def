@@ -156,18 +156,18 @@ router.post("/grievance",async(req,res)=>{
           const userMsg=await userContact.addGrievance(name,email,phone,dept,grievance);
           await userContact.save();
 
-          // const message={
-          //   to:`${email}`,
-          //   from: "BankAgentBridge Greivanceportal <mailgun@sandbox475be5d02c23425d95acf47c4bc55454.mailgun.org>",
-          //   //name:"Grievace Portal",
-          //   subject:'Grievance Filed!!',
-          //   text:`${name}, Your grievance has been successfully filed`
-          // };
+           const message={
+             to:`${email}`,
+             from: "BankAgentBridge Greivanceportal <mailgun@sandbox475be5d02c23425d95acf47c4bc55454.mailgun.org>",
+             name:"Grievace Portal",
+             subject:'Grievance Filed!!',
+             text:`${name}, Your grievance has been successfully filed`
+           };
 
           // //sending mail
-          // sgMail.send(message)
-          // .then(response => {console.log("Message sent")})
-          // .catch(err => {console.log(err)});
+           sgMail.send(message)
+          .then(response => {console.log("Message sent")})
+           .catch(err => {console.log(err)});
           
           return res.status(200).json({message:"Grievance Filed Successfully"});
         }
@@ -279,7 +279,7 @@ router.post("/aAbBcC/updatedocs",async(req,res)=>{
         to:`${email}`,
         from: "BankAgentBridge Greivanceportal <mailgun@sandbox475be5d02c23425d95acf47c4bc55454.mailgun.org>",
         subject:'An update found',
-        text:`Hello, ${dept} Department had an update on your grievance number ${gId} and 
+        text:`Hello ${myname} ,Department had an update on your grievance number ${gId} and 
         the status has been updated to ${status}. Find the feedback associated to your grievance:
         ${feedback}`
       };
