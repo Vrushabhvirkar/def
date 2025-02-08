@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-mongoose.connect("mongodb+srv://vegcarton08:hrRvAYSe5xpBylhR@bankagentbridgegrievanc.cqdkm.mongodb.net/test",
+mongoose.connect("mongodb+srv://vegcarton08:hrRvAYSe5xpBylhR@bankagentbridgegrievanc.cqdkm.mongodb.net/amit",
 {useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
